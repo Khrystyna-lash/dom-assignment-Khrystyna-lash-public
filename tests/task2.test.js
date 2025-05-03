@@ -55,7 +55,10 @@ describe("Тестування стилів", () => {
     expect(secondPar.style.color).toBe("red");
     expect(thirdPar.style.textDecoration).toBe("underline");
     expect(fourthPar.style.fontStyle).toBe("italic");
-    expect(myList.style.listStyle).toBe("none");
+    expect(
+      myList.style.listStyleType === "none" ||
+      myList.style.listStyle === "none"
+    ).toBeTruthy();
     expect(myList.style.display).toBe("flex");
     expect(span.style.display).toBe("none");
   });
