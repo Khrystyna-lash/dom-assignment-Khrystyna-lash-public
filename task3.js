@@ -9,3 +9,18 @@
 // Цю розмітку потрібно вставити у існуючий html елемент із класом "create_elements"
 // Спробуйте не використовувати рядок HTML-коду для вставки (`innerHTML`).
 // Використовуйте методи DOM: `createElement()`, `appendChild()`, `setAttribute()`, `classList.add()` тощо.
+const container = document.querySelector('.create_elements');
+if (container) {
+    const main = document.createElement('main');
+    main.classList.add('mainClass', 'check', 'item');
+
+    const div = document.createElement('div');
+    div.id = 'myDiv';
+
+    const p = document.createElement('p');
+    p.textContent = 'First paragraph';
+
+    div.appendChild(p);
+    main.appendChild(div);
+    container.appendChild(main);
+}
